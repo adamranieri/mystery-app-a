@@ -5,7 +5,7 @@ class Message(BaseModel):
     content: str
 
 
-class SavedMessage(BaseModel):
+class Note(BaseModel):
     index: int
     content: str 
 
@@ -26,3 +26,6 @@ class Coordinate(BaseModel):
     longitude: float
     nsHemisphere: str
     ewHemisphere: str
+
+class DocumentInfo(BaseModel):
+    docId: str
