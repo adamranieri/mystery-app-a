@@ -90,7 +90,7 @@ def multiply(num1:float, num2:float, amount:int) -> str:
 
     return "Done"
 
-@app.get("/coordinates/{amount}", summary="Returns a list of randomly generated geo coordiantes")
+@app.get("/coordinates/{amount}", summary="Returns a list of randomly generated geo coordiantes", response_model=list[Coordinate])
 def create_random_geopoints(amount:int) -> list[Coordinate]:
 
     coordiantes:list[Coordinate] = []
